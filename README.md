@@ -1,6 +1,6 @@
 
 # NEXUS-6
-### Distributed Multi-Room Sensor Monitoring Network Using ESP32
+### Industrial Monitoring System Using Microcontrollers
 
 **A modular IoT-based monitoring system designed to collect sensor data from six distributed ESP32 client nodes and centralize it through a single ESP32 host with a local web dashboard.**
 
@@ -20,9 +20,29 @@
 
 ## Overview
 
-NEXUS-6 is a distributed sensor-monitoring project built around the ESP32 microcontroller platform. It is designed to monitor multiple rooms or designated areas through independent sensor nodes while providing a centralized interface for viewing their reported data.
 
-Instead of connecting every sensor directly to a single controller, the system distributes sensing tasks across multiple ESP32 clients. Each client reads its assigned sensors and transmits its readings over Wi-Fi to a central ESP32 host. The host processes the incoming HTTP requests and provides a local web dashboard for monitoring the connected nodes.
+# NEXUS-6
+
+### Distributed Industrial IoT Monitoring and Condition Awareness Platform
+
+**NEXUS-6 is an ESP32-based distributed monitoring platform designed to collect sensor data from multiple industrial zones and present it through a centralized local web dashboard.**
+
+The system follows a modular host-client architecture in which independent ESP32 nodes monitor designated areas, machines, or environmental conditions. Sensor readings are transmitted over a Wi-Fi network using HTTP and collected by a central ESP32 host for browser-based visualization.
+
+The platform is designed around the monitoring needs commonly found in industrial facilities, including:
+
+- Environmental conditions such as temperature, humidity, and air quality.
+- Gas-related sensor readings and flame-detection inputs.
+- Proximity and distance measurements.
+- Equipment status and, in future extensions, machine vibration analysis.
+- Centralized visibility of sensor readings and node connectivity.
+
+NEXUS-6 aims to provide a structured foundation for multi-zone industrial monitoring, embedded networking, sensor integration, and future condition-monitoring capabilities.
+
+**Architecture:** 1 ESP32 host + 6 distributed client nodes  
+**Communication:** Wi-Fi + HTTP  
+**Interface:** Local browser-based dashboard  
+**Development stage:** Prototype
 
 The architecture separates sensor acquisition from centralized monitoring, making the system easier to organize, troubleshoot, extend, and maintain.
 
