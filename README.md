@@ -67,6 +67,7 @@ The architecture separates sensor acquisition from centralized monitoring, makin
 
 ## Table of Contents
 
+- [Project & Result Images] (#project-&-result-images)
 - [System Architecture](#system-architecture)
 - [Key Features](#key-features)
 - [Hardware Architecture](#hardware-architecture)
