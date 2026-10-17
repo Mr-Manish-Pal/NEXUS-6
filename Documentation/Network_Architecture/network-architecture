@@ -1,0 +1,35 @@
+## 🌐 Network Architecture & Working
+
+### 1. IP Address & Host Configuration
+Project mein sabhi devices ek hi Wi-Fi network par kaam karte hain. Data bhejne aur receive karne ke liye IP address ka use hota hai.
+
+- **Host IP Address:** `10.43.47.96` (Yeh IP Host ESP32 ko router/hotspot se milta hai. Host is IP par Web Server chala kar data receive karta hai aur dashboard show karta hai.)
+- **Client IP Address:** `10.43.47.XX` (Har client ESP32/ESP8266 ko alag IP milta hai, jaise `10.43.47.55`, `10.43.47.56` etc. Yeh IP DHCP se automatically assign hote hain.)
+
+**Note:** Agar Host ka IP change ho jata hai (router restart hone par), toh sabhi clients ke code mein `HOST_URL` update karna padta hai.
+
+### 2. Network Type & Topology
+- **Network Type:** Wi-Fi (Station Mode)
+- **Topology:** Star Topology (Host center mein, aur sabhi clients uske aas-paas)
+- **Protocol:** HTTP (Hypertext Transfer Protocol)
+- **Data Format:** JSON (JavaScript Object Notation)
+
+### 3. Working Mechanism (Step-by-Step)
+
+**Step 1: Client Data Collection**
+Har client ESP board apne sensors (MQ2, DHT11, Ultrasonic, etc.) se data read karta hai.
+
+**Step 2: Data Formatting (JSON)**
+Client us data ko ek JSON string mein convert karta hai. Example:
+```json
+{
+  "client_id": 1,
+  "mq2_value": 1234,
+  "ultrasonic_cm": 45.3,
+  "flame_value": 0,
+  "mq135_value": 0,
+  "ir_value": 0,
+  "dht_temp": 0,
+  "dht_hum": 0,
+  "servo_angle": 0
+}
