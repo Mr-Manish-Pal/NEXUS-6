@@ -1,0 +1,47 @@
+# 📡 Smart Multi-Room Monitoring System
+
+## 📖 Project Overview
+Yeh ek IoT-based Multi-Room Monitoring System hai, jo real-time sensor data ko monitor karne ke liye design kiya gaya hai. Is project mein total **7 ESP boards** (1 Host + 6 Clients) use kiye gaye hain. Har client apne respective room ke sensors se data read karta hai aur Wi-Fi (HTTP Protocol) ke zariye Host ESP32 ko bhejta hai. Host us data ko collect karke ek responsive Web Dashboard par live display karta hai.
+
+---
+
+## 🛠️ Hardware Requirements
+
+### 1. Microcontrollers
+*   **ESP32 (Host & 6 Clients):** Dual-core, 240MHz, built-in Wi-Fi, 12-bit ADC. High processing power aur multiple analog pins ki wajah se yahan use kiya gaya hai.
+*   **ESP8266 (NodeMCU/Lolin):** Single-core, 80/160MHz, built-in Wi-Fi, 10-bit ADC (sirf A0 pin). Sasta aur compact alternative hai.
+
+### 2. Sensors
+*   **MQ-2 Gas Sensor:** LPG, Smoke, Methane detect karta hai. Analog (AO) aur Digital (DO) output deta hai.
+*   **MQ-135 Air Quality Sensor:** Air quality (CO2, NH3, Smoke) measure karta hai. Iska warm-up time 24-48 hours hota hai.
+*   **HC-SR04 Ultrasonic Sensor:** Distance measure karta hai (2cm - 400cm). Trigger pulse bhej kar Echo se time measure karta hai (`Distance = Time / 58`).
+*   **DHT11 Sensor:** Temperature (0-50°C) aur Humidity (20-90%) measure karta hai.
+*   **IR Motion Sensor:** Motion detect karta hai. Output LOW (0) hota hai jab motion ho.
+*   **Flame Sensor:** Aag (Fire) detect karta hai. Flame hone par output LOW (0) hota hai.
+*   **SG90 Servo Motor:** 0° se 180° tak rotate karta hai. PWM signal se control hota hai.
+
+---
+
+## 🔌 Pin Configuration
+
+| Device | Room | Sensors Connected | ESP Pin Mapping |
+| :--- | :--- | :--- | :--- |
+| **Host** | Central | None (Web Server) | - |
+| **Client 1** | Room 1 | MQ-2, Ultrasonic | MQ2 AO: GPIO34, TRIG: GPIO18, ECHO: GPIO19 |
+| **Client 2** | Room 2 | MQ-2, Flame | MQ2 AO: GPIO34, Flame DO: GPIO5 |
+| **Client 3** | Room 3 | MQ-135, IR | MQ135 AO: GPIO34, IR OUT: GPIO5 |
+| **Client 4** | Room 4 | MQ-135, DHT11 | MQ135 AO: GPIO34, DHT DATA: GPIO18 |
+| **Client 5** | Room 5 | Flame, Servo | Flame DO: GPIO5, Servo Signal: GPIO4 |
+| **Client 6** | Room 6 | Flame, Servo | Flame DO: GPIO4, Servo Signal: GPIO5 |
+| **ESP8266** | Client 7 | MQ-135, IR | MQ135 AO: A0, IR OUT: D5 |
+
+---
+
+## 📚 Libraries Required (PlatformIO)
+
+Har project ke `platformio.ini` mein zaroorat ke hisaab se yeh libraries daalein:
+
+### Host (ESP32)
+```ini
+lib_deps =
+    bblanchon/ArduinoJson
