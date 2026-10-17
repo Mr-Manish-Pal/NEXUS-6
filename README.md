@@ -30,6 +30,19 @@
 
 # NEXUS-6
 
+# PICS
+
+## Project Gallery
+
+### Project Overview
+![NEXUS-6 Project](Images/project pic.jpeg)
+
+### Hardware Setup
+![NEXUS-6 Hardware](Images/laptop view.jpeg)
+
+### Dashboard
+![NEXUS-6 Dashboard](Images/phone view.jpeg)
+
 ### Distributed Industrial IoT Monitoring and Condition Awareness Platform
 
 **NEXUS-6 is an ESP32-based distributed monitoring platform designed to collect sensor data from multiple industrial zones and present it through a centralized local web dashboard.**
@@ -67,7 +80,6 @@ The architecture separates sensor acquisition from centralized monitoring, makin
 
 ## Table of Contents
 
-- [Project & Result Images] (#project-&-result-images)
 - [System Architecture](#system-architecture)
 - [Key Features](#key-features)
 - [Hardware Architecture](#hardware-architecture)
