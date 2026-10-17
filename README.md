@@ -20,6 +20,13 @@
 
 ## Overview
 
+## NEXUS-6 Project Demonstration
+
+🏆 **State-Level 1st Prize Winner — Seva Sankalp Innovation Challenge 2026**
+
+[![Watch NEXUS-6 Project Demonstration](https://img.youtube.com/vi/PY2j88WJSaA/maxresdefault.jpg)](https://youtu.be/PY2j88WJSaA)
+
+**▶ Watch the complete project demonstration on YouTube**
 
 # NEXUS-6
 
