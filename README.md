@@ -35,13 +35,13 @@
 ## Project Gallery
 
 ### Project Overview
-![NEXUS-6 Project](Images/project pic.jpeg)
+![NEXUS-6 Project](Images/project%20pic.jpeg)
 
 ### Hardware Setup
-![NEXUS-6 Hardware](Images/laptop view.jpeg)
+![NEXUS-6 Hardware](Images/laptop%20view.jpeg)
 
 ### Dashboard
-![NEXUS-6 Dashboard](Images/phone view.jpeg)
+![NEXUS-6 Dashboard](Images/phone%20view.jpeg)
 
 ### Distributed Industrial IoT Monitoring and Condition Awareness Platform
 
