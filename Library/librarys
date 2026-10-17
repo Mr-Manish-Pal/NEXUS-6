@@ -1,0 +1,64 @@
+; ============================================================
+; MASTER LIBRARY LIST - PlatformIO (lib_deps)
+; Is list se copy karke apne project ke platformio.ini mein daalo
+; ============================================================
+
+; ------------------------------------------------------------
+; 1. HOST (ESP32)
+; Sirf JSON parsing aur web dashboard ke liye
+; ------------------------------------------------------------
+lib_deps =
+    bblanchon/ArduinoJson
+
+
+; ------------------------------------------------------------
+; 2. CLIENT 1 (ESP32 - MQ2 + Ultrasonic)
+; Koi extra library nahi chahiye (WiFi & HTTP built-in hain)
+; ------------------------------------------------------------
+; lib_deps = (khaali chhod do)
+
+
+; ------------------------------------------------------------
+; 3. CLIENT 2 (ESP32 - MQ2 + Flame)
+; Koi extra library nahi chahiye
+; ------------------------------------------------------------
+; lib_deps = (khaali chhod do)
+
+
+; ------------------------------------------------------------
+; 4. CLIENT 3 (ESP32 - MQ135 + IR)
+; Koi extra library nahi chahiye
+; ------------------------------------------------------------
+; lib_deps = (khaali chhod do)
+
+
+; ------------------------------------------------------------
+; 5. CLIENT 4 (ESP32 - MQ135 + DHT11)
+; DHT sensor ke liye 2 libraries chahiye
+; ------------------------------------------------------------
+lib_deps =
+    adafruit/DHT sensor library
+    adafruit/Adafruit Unified Sensor
+
+
+; ------------------------------------------------------------
+; 6. CLIENT 5 (ESP32 - Flame + Servo)
+; Servo motor ke liye 1 library chahiye
+; ------------------------------------------------------------
+lib_deps =
+    madhephaestus/ESP32Servo
+
+
+; ------------------------------------------------------------
+; 7. CLIENT 6 (ESP32 - Flame + Servo)
+; Servo motor ke liye 1 library chahiye
+; ------------------------------------------------------------
+lib_deps =
+    madhephaestus/ESP32Servo
+
+
+; ------------------------------------------------------------
+; 8. CLIENT (ESP8266 Lolin - IR + MQ135)
+; Koi extra library nahi chahiye
+; ------------------------------------------------------------
+; lib_deps = (khaali chhod do)
